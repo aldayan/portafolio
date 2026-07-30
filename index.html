@@ -2,333 +2,719 @@
 <html lang="en">
 
 <head>
-    <title>Portafolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aldayan A. Avila Dotel · Web Developer</title>
+    <meta name="description" content="Portfolio of Aldayan A. Avila Dotel, full-stack web developer from the Dominican Republic. Explore my projects, skills and education.">
+    <meta name="author" content="Aldayan A. Avila Dotel">
+    <meta name="theme-color" content="#0b0f1a">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aldayan A. Avila Dotel · Web Developer">
+    <meta property="og:description" content="Full-stack web developer from the Dominican Republic. Explore my projects, skills and education.">
+    <meta property="og:image" content="asset/img/portafolio.png">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="icon" href="asset/img/portafolio.png" type="image/png">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
     <link href="asset/css/reset.css" rel="stylesheet">
     <link href="asset/css/style-index.css" rel="stylesheet">
-    <link rel="icon" href="asset/img/portafolio.png" type="image/x-icon">
+
+    <!-- Previene parpadeo: activa el scroll-reveal y el tema antes de pintar -->
+    <script>document.documentElement.classList.add('js');
+        (function(){try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+    </script>
 </head>
 
 <body>
+    <a href="#inicio" class="skip-link">Skip to content</a>
 
-    <section class="menu" id="inicio" >
-        <div class="container">
-            <header class="menu__header">
-                <h3 class="menu__title">Aldayan A. Avila Dotel</h3>
-            </header>
-            <nav class="lista">
-                <ul class="menu-list">
-                    <li class="menu__list__item"><a href="#sobre-mi ">Sobre mi</a></li>
-                    <li class="menu__list__item"><a href="#habilidad ">Habilidades</a></li>
-                    <li class="menu__list__item"><a href="#hobbies ">Hobbies</a></li>
-                    <li class="menu__list__item"><a href="#formacion ">Formación</a></li>
-                    <li class="menu__list__item"><a href="#proyectos ">Experiencia</a></li>
-                    <li class="menu__list__item"><a href="#contactos ">Contactos</a></li>
-                </ul>
+    <!-- ============ Header / Navigation ============ -->
+    <header class="site-header">
+        <div class="nav">
+            <a href="#inicio" class="brand">
+                <span class="brand__dot" aria-hidden="true"></span>
+                Aldayan<span style="color:var(--accent-2)">.</span>dev
+            </a>
+
+            <nav class="nav__links" id="nav-links" aria-label="Main navigation">
+                <a href="#sobre-mi">About</a>
+                <a href="#experiencia">Experience</a>
+                <a href="#habilidad">Skills</a>
+                <a href="#idiomas">Languages</a>
+                <a href="#formacion">Education</a>
+                <a href="#proyectos">Projects</a>
+                <a href="#contactos">Contact</a>
+                <a href="https://aldayan.github.io/certificaciones-alura/" target="_blank" rel="noopener">Certificates</a>
             </nav>
+
+            <div class="nav__actions">
+                <button class="theme-toggle" type="button" aria-label="Toggle light/dark theme" title="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <button class="nav__toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-    </section>
+    </header>
 
-
-    <main class="desarrollo ">
-        <div class="container ">
-
-            <section class="titulo ">
-                <div class="container ">
-                    <img class="perfil" src="asset/img/giphy.gif" alt="gif de programador">
-                    <div class="texto">
-                        <h2 class="titulo__biografia aparecer">Hola, mi nombre es Aldayan A. Avila Dotel y construyo paginas web.</h2>
-                        <h3 class="titulo-secundario aparecer">Soy formado en el instituto tecnologico de las americas ITLA Y actualmente estoy participando en el proyecto Oracle ONE en Alura Latam.</h3>
+    <main>
+        <!-- ============ Hero ============ -->
+        <section class="hero section" id="inicio">
+            <div class="container">
+                <div class="hero__grid">
+                    <div class="hero__content">
+                        <p class="eyebrow aparecer">Software Developer</p>
+                        <h1 class="hero__name aparecer">Hi, I'm <span class="grad">Aldayan</span> Avila Dotel</h1>
+                        <p class="hero__role aparecer">Full-stack web developer from the Dominican Republic.</p>
+                        <p class="hero__bio aparecer">
+                            Full-stack developer at <strong>Syntonex</strong>, Software Engineering student at <strong>UNAPEC</strong>
+                            and ITLA graduate. Specialized in building
+                            modern interfaces, REST APIs and AI solutions (LLM, MCP, N8N).
+                        </p>
+                        <div class="hero__cta aparecer">
+                            <a href="#proyectos" class="btn btn--primary">View projects</a>
+                            <a href="CV_Aldayan_Developer.pdf" download class="btn btn--secondary">Download CV</a>
+                        </div>
+                        <div class="social aparecer">
+                            <a href="https://www.linkedin.com/in/aldayan-avila-dotel/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                            </a>
+                            <a href="https://github.com/aldayan" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                            </a>
+                            <a href="CV_Aldayan_Avila_Dotel.pdf" download aria-label="Descargar CV">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M9 13h6M9 17h6"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="redes aparecer">
-                        <a href="https://www.linkedin.com/in/aldayan-avila-b972a2239/ "><img src="asset/img/linkedin.png " alt="logo de linkedin "></a>
-                        <a href="https://github.com/aldayan"><img src="asset/img/github.png " alt="logo de github "></a>
-                        <a download="CURRICULUM ALDAYAN" href="CV.  ALDAYAN A. AVILA DOTEL.pdf"><img src="asset/img/doc.png " alt="logo de documentos"></a>
-                    </div>
-                </div>
-            </section>
 
-
-            <section class="sobre-mi aparecer" id="sobre-mi">
-                <div class="container aparecer">
-                    <h3 class="titulo-sobremi">Sobre mi</h3>
-                    <p class="informacion aparecer">
-                   Tengo 21 años. soy dominicano y soy miembro del programa ONE.
-                    </p>
-
-                    <p class="informacion aparecer">
-                        soy un estudiante que dio término al técnico superior de software del instituto tecnológico de las americas ITLA. Tengo conocimientos avanzados en el lenguajes de programación y bases de datos.
-                    </p>
-                    <p class="informacion aparecer">
-                        He desarrollado diferentes tipos de software, páginas web y bases de datos, y sigo estudiando dia a dia. para de esta forma agudizar mis conocimientos como desarrollador de software.
-                    </p>
-
-                </div>
-            </section>
-
-
-            <section class="habilidad aparecer" id="habilidad">
-                <div class="container aparecer">
-                    <h3 class="titulo-habilidad">Habilidades</h3>
-
-                    <div class="habilidades aparecer">
-
-                        <div class="caja-habilidades html aparecer">
-                            <ul class="lista-habilidad">
-                                <li class="img-habilidades"> <img src="asset/img/html.png" alt="logo de html"></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-habilidades js aparecer">
-                            <ul class="lista-habilidad">
-                                <li class="img-habilidades"> <img src="asset/img/js.png" alt="logo de js"></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-habilidades sql aparecer">
-                            <ul class="lista-habilidad ">
-                                <li class="img-habilidades "> <img src="asset/img/sql.png " alt="logo de sql"></li>
-                            </ul>
-                        </div>
-
-
-                        <div class="caja-habilidades php aparecer">
-                            <ul class="lista-habilidad ">
-                                <li class="img-habilidades "> <img src="asset/img/php.png " alt="logo de php"></li>
-                            </ul>
-                        </div>
-                        <div class="caja-habilidades git aparecer">
-                            <ul class="lista-habilidad ">
-                                <li class="img-habilidades "><img src="asset/img/git.png " alt="lofo de git"></li>
-                            </ul>
-                        </div>
-                        <div class="caja-habilidades css aparecer">
-                            <ul class="lista-habilidad ">
-                                <li class="img-habilidades "> <img src="asset/img/css.png " alt="logo de css"> </li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-habilidades cc aparecer">
-                            <ul class="lista-habilidad ">
-                                <li class="img-habilidades "><img src="asset/img/c+.png " alt="logo de c++"></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-habilidades c  aparecer">
-                            <ul class="lista-habilidad ">
-                                <li class="img-habilidades "> <img src="asset/img/c.png " alt=" logo de c#"> </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="hobbies aparecer" id="hobbies">
-                <div class="container aparecer">
-                    <h3 class="titulo-hobbies ">Hobbies</h3>
-
-                    <div class="hobbi ">
-
-
-                        <div class="caja-hobbi aparecer">
-                            <ul class="lista-hobbi ">
-                                <li class="img-hobbi "> <img src="asset/img/gym.png " alt="logo de gym"></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-hobbi aparecer">
-                            <ul class="lista-hobbi ">
-                                <li class="img-hobbi "><img src="asset/img/ejercicio.png "></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-hobbi aparecer">
-                            <ul class="lista-hobbi ">
-                                <li class="img-hobbi "> <img src="asset/img/correr.png " alt="logo de correr"> </li>
-                            </ul>
-                        </div>
-
-
-                        <div class="caja-hobbi aparecer">
-                            <ul class="lista-hobbi ">
-                                <li class="img-hobbi "> <img src="asset/img/calistenia.png " alt="logode calistenia  "></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-hobbi aparecer">
-                            <ul class="lista-hobbi ">
-                                <li class="img-hobbi "><img src="asset/img/programacion.png " alt="logo de programacion"></li>
-                            </ul>
-                        </div>
-
-                        <div class="caja-hobbi aparecer">
-                            <ul class="lista-hobbi ">
-                                <li class="img-hobbi "> <img src="asset/img/tv.png " alt="logo de tv"> </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="formacion aparecer" id="formacion">
-                <div class="container aparecer">
-                    <h3 class="titulo-formacion ">Formacion academica</h3>
-                    <div class="cursos aparecer">
-                        <div class="caja-cursos aparecer">
-                            <ul class="lista-cursos ">
-                                <li class="img-cursos "><img src="asset/img/itla.jpg "></li>
-                                <li class="titulo-cursos ">
-                                    <h4>Desarrollador de software</h4>
-                                </li>
-                                <li class="titulo-subtitulo-cursos ">
-                                    <p>2018 - ITLA</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="caja-cursos aparecer">
-                            <ul class="lista-cursos ">
-                                <li class="img-cursos "><img src="asset/img/ailogic.jpg "></li>
-                                <li class="titulo-cursos ">
-                                    <h4>Pasante Ailogic</h4>
-                                </li>
-                                <li class="titulo-subtitulo-cursos ">
-                                    <p>2020 - Ailogic</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="caja-cursos aparecer">
-                            <ul class="lista-cursos ">
-                                <li class="img-cursos "><img src="asset/img/alura.jpg "></li>
-                                <li class="titulo-cursos ">
-                                    <h4>Estudiante Front-end</h4>
-                                </li>
-                                <li class="titulo-subtitulo-cursos ">
-                                    <p>En curso - ALURA</p>
-                                </li>
-                            </ul>
+                    <div class="hero__visual aparecer">
+                        <span class="hero__glow" aria-hidden="true"></span>
+                        <span class="floating-chip" aria-hidden="true"><img src="asset/img/html.png" alt="" width="28" height="28"></span>
+                        <span class="floating-chip" aria-hidden="true"><img src="asset/img/js.png" alt="" width="28" height="28"></span>
+                        <span class="floating-chip" aria-hidden="true"><img src="asset/img/css.png" alt="" width="28" height="28"></span>
+                        <div class="hero__card">
+                            <div class="hero__monogram">AA</div>
+                            <h3>Aldayan Avila</h3>
+                            <span>Front-end Developer</span>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="proyectos aparecer" id="proyectos">
-                <div class="container aparecer">
-                    <h3 class="titulo-proyectos ">Experiencia profesional</h3>
-                    <div class="experiencia aparecer">
-                        <img class="img-experiencia " src="asset/img/pasante.JPG ">
-                        <div class="experiencia-informacion ">
-                            <h2 class="experiencia-titulo ">Pagina web para pasantes</h2>
-                            <h3 class="experiencia-texto ">Proyecto Ailogic</h3>
-                            <div class="experiencia-descripcion ">
-                                <span class="experiencia-repositorio "><a href="https://github.com/aldayan/pasantesalpha"><button class="experiencia-boton">Repositório</button></a></span>
-                                <span class="experiencia-demo "><a href="https://pasantesalpha.free.nf/"><button class="experiencia-boton">Ver demo</button></a></span>
+        <!-- ============ About Me ============ -->
+        <section class="section alt" id="sobre-mi">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">About Me</p>
+                    <h2 class="section-title">A bit about my journey</h2>
+                </div>
+                <div class="about__grid">
+                    <div class="about__text aparecer">
+                        Full-stack developer with over 6 years of experience designing, developing and implementing scalable web applications and REST APIs.
+                        Specialized in PHP, JavaScript, Node.js and relational databases. With growing experience in applied artificial intelligence: process automation with LLM,
+                        AI agent integration, MCP (Model Context Protocol) and N8N workflows. Passionate
+                        about problem-solving, process optimization and building solutions that generate real business impact.
+                    </div>
+                    <div class="about__facts">
+                        <div class="fact aparecer">
+                            <span class="fact__icon">DO</span>
+                            <span><span class="fact__label">Nationality</span><br><span class="fact__value">Dominican</span></span>
+                        </div>
+                        <div class="fact aparecer">
+                            <span class="fact__icon">6+</span>
+                            <span><span class="fact__label">Experience</span><br><span class="fact__value">6+ years</span></span>
+                        </div>
+                        <div class="fact aparecer">
+                            <span class="fact__icon">ONE</span>
+                            <span><span class="fact__label">Program</span><br><span class="fact__value">Oracle · Alura</span></span>
+                        </div>
+                        <div class="fact aparecer">
+                            <span class="fact__icon">UNA</span>
+                            <span><span class="fact__label">University</span><br><span class="fact__value">Software Engineering · UNAPEC</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Experience ============ -->
+        <section class="section" id="experiencia">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Experience</p>
+                    <h2 class="section-title">Professional background</h2>
+                </div>
+                <div class="exp-list">
+                    <div class="exp-item aparecer">
+                        <div class="exp-item__head">
+                            <h4>Full Stack Developer</h4>
+                            <span class="exp-item__company">Syntonex</span>
+                            <span class="exp-item__date">Sep 2022 — Present</span>
+                        </div>
+                        <ul class="exp-item__list">
+                            <li>Development of scalable web solutions with PHP and MySQL, optimizing efficiency and performance.</li>
+                            <li>Design and maintenance of robust REST APIs for integration of multiple external services.</li>
+                            <li>Implementation of chatbots and AI agents using LLM and MCP for process automation.</li>
+                            <li>Automation of operational workflows with N8N, reducing manual times by up to 40%.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item aparecer">
+                        <div class="exp-item__head">
+                            <h4>Systems & Automation Analyst</h4>
+                            <span class="exp-item__company">Fernandez de Castro Corredores de Seguros</span>
+                            <span class="exp-item__date">Jan 2026 — Present</span>
+                        </div>
+                        <ul class="exp-item__list">
+                            <li>Administration and maintenance of relational databases (MySQL/MariaDB) for clients, contracts and claims.</li>
+                            <li>Automation of operational processes through PHP and PowerShell scripts.</li>
+                            <li>Generation of KPI reports and dashboards for executive management.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item aparecer">
+                        <div class="exp-item__head">
+                            <h4>Full Stack Developer & Systems Support</h4>
+                            <span class="exp-item__company">Ferlon Industries</span>
+                            <span class="exp-item__date">Jan 2026 — Present</span>
+                        </div>
+                        <ul class="exp-item__list">
+                            <li>Support in internal systems administration and operational task automation with scripting.</li>
+                            <li>Configuration and maintenance of network environments and equipment.</li>
+                            <li>Documentation of technical processes and user support.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item aparecer">
+                        <div class="exp-item__head">
+                            <h4>Front-End Developer</h4>
+                            <span class="exp-item__company">Ailogic</span>
+                            <span class="exp-item__date">Sep 2020 — Jan 2021</span>
+                        </div>
+                        <ul class="exp-item__list">
+                            <li>Design and development of web applications and enterprise systems with JavaScript and Angular.</li>
+                            <li>Code reviews and front-end architecture optimization under agile methodologies (SCRUM).</li>
+                            <li>Implementation of unit tests and software quality assurance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Skills ============ -->
+        <section class="section" id="habilidad">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Skills</p>
+                    <h2 class="section-title">Technologies I work with</h2>
+                </div>
+                <!-- Programming Languages -->
+                <div class="skill-group aparecer">
+                    <h3 class="skill-group__title">Programming Languages</h3>
+                    <div class="cards-grid">
+                        <div class="skill-card aparecer" data-tech="php">
+                            <span class="card__icon"><img src="asset/img/php.png" alt="PHP" width="38" height="38"></span>
+                            <span class="card__label">PHP</span>
+                            <span class="card__desc">Back-end & REST APIs</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="js">
+                            <span class="card__icon"><img src="asset/img/js.png" alt="JavaScript" width="38" height="38"></span>
+                            <span class="card__label">JavaScript</span>
+                            <span class="card__desc">Logic & web interactivity</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="python">
+                            <span class="card__icon">🐍</span>
+                            <span class="card__label">Python</span>
+                            <span class="card__desc">Scripts & automation</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="java">
+                            <span class="card__icon">☕</span>
+                            <span class="card__label">Java</span>
+                            <span class="card__desc">Robust applications</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="sql">
+                            <span class="card__icon"><img src="asset/img/sql.png" alt="SQL" width="38" height="38"></span>
+                            <span class="card__label">SQL</span>
+                            <span class="card__desc">Data querying & management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Libraries -->
+                <div class="skill-group aparecer">
+                    <h3 class="skill-group__title">Frameworks & Libraries</h3>
+                    <div class="cards-grid">
+                        <div class="skill-card aparecer" data-tech="nodejs">
+                            <span class="card__icon">⬢</span>
+                            <span class="card__label">Node.js</span>
+                            <span class="card__desc">Servers / back-end in JS</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="angular">
+                            <span class="card__icon">▲</span>
+                            <span class="card__label">Angular</span>
+                            <span class="card__desc">Front-end SPAs</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="laravel">
+                            <span class="card__icon">◈</span>
+                            <span class="card__label">Laravel</span>
+                            <span class="card__desc">PHP back-end framework</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="express">
+                            <span class="card__icon">{ }</span>
+                            <span class="card__label">Express.js</span>
+                            <span class="card__desc">REST APIs in Node</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-group aparecer">
+                    <h3 class="skill-group__title">Databases</h3>
+                    <div class="cards-grid">
+                        <div class="skill-card aparecer" data-tech="mysql">
+                            <span class="card__icon">🐬</span>
+                            <span class="card__label">MySQL / MariaDB</span>
+                            <span class="card__desc">Schema design, optimization, migrations</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="oracle">
+                            <span class="card__icon">🔴</span>
+                            <span class="card__label">Oracle</span>
+                            <span class="card__desc">Enterprise data management</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="postgresql">
+                            <span class="card__icon">🐘</span>
+                            <span class="card__label">PostgreSQL</span>
+                            <span class="card__desc">Advanced relational database</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="sqlserver">
+                            <span class="card__icon">🛠️</span>
+                            <span class="card__label">SQL Server MS</span>
+                            <span class="card__desc">DB management & administration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APIs & Integrations -->
+                <div class="skill-group aparecer">
+                    <h3 class="skill-group__title">APIs & Integrations</h3>
+                    <div class="cards-grid">
+                        <div class="skill-card aparecer" data-tech="rest">
+                            <span class="card__icon">🔗</span>
+                            <span class="card__label">REST APIs</span>
+                            <span class="card__desc">Service communication</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="jwt">
+                            <span class="card__icon">🔐</span>
+                            <span class="card__label">JWT / OAuth</span>
+                            <span class="card__desc">Secure authentication</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="webhooks">
+                            <span class="card__icon">🔔</span>
+                            <span class="card__label">Webhooks</span>
+                            <span class="card__desc">Real-time events</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Automation -->
+                <div class="skill-group aparecer">
+                    <h3 class="skill-group__title">AI & Automation</h3>
+                    <div class="cards-grid">
+                        <div class="skill-card aparecer" data-tech="llm">
+                            <span class="card__icon">🤖</span>
+                            <span class="card__label">LLM</span>
+                            <span class="card__desc">Language models</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="mcp">
+                            <span class="card__icon">🧩</span>
+                            <span class="card__label">MCP</span>
+                            <span class="card__desc">Model Context Protocol (AI + tools)</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="agentes">
+                            <span class="card__icon">🧠</span>
+                            <span class="card__label">AI Agents</span>
+                            <span class="card__desc">Autonomous tasks</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="n8n">
+                            <span class="card__icon">🔄</span>
+                            <span class="card__label">N8N</span>
+                            <span class="card__desc">Workflow orchestration</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="chatbots">
+                            <span class="card__icon">💬</span>
+                            <span class="card__label">Chatbots</span>
+                            <span class="card__desc">Automated support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="skill-group aparecer">
+                    <h3 class="skill-group__title">DevOps & Tools</h3>
+                    <div class="cards-grid">
+                        <div class="skill-card aparecer" data-tech="git">
+                            <span class="card__icon"><img src="asset/img/git.png" alt="Git" width="38" height="38"></span>
+                            <span class="card__label">Git</span>
+                            <span class="card__desc">Version control</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="github">
+                            <span class="card__icon"><img src="asset/img/github.png" alt="GitHub" width="38" height="38"></span>
+                            <span class="card__label">GitHub</span>
+                            <span class="card__desc">Repositories & collaboration</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="docker">
+                            <span class="card__icon">🐳</span>
+                            <span class="card__label">Docker</span>
+                            <span class="card__desc">Containers & deployment</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="jira">
+                            <span class="card__icon">📋</span>
+                            <span class="card__label">Jira</span>
+                            <span class="card__desc">Agile management</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="vscode">
+                            <span class="card__icon"><img src="asset/img/vscode.svg" alt="VS Code" width="38" height="38"></span>
+                            <span class="card__label">VS Code</span>
+                            <span class="card__desc">Code editor</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="figma">
+                            <span class="card__icon"><img src="asset/img/figma.svg" alt="Figma" width="38" height="38"></span>
+                            <span class="card__label">Figma</span>
+                            <span class="card__desc">UI design</span>
+                        </div>
+                        <div class="skill-card aparecer" data-tech="powershell">
+                            <span class="card__icon">⚡</span>
+                            <span class="card__label">PowerShell</span>
+                            <span class="card__desc">Automation scripts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Languages ============ -->
+        <section class="section alt" id="idiomas">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Languages</p>
+                    <h2 class="section-title">Languages I speak</h2>
+                </div>
+                <div class="cards-grid">
+                    <div class="skill-card aparecer" data-tech="espanol">
+                        <span class="card__icon">🇩🇴</span>
+                        <span class="card__label">Spanish (Native)</span>
+                    </div>
+                    <div class="skill-card aparecer" data-tech="ingles">
+                        <span class="card__icon">🇺🇸</span>
+                        <span class="card__label">English (Intermediate)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Hobbies ============ -->
+        <section class="section alt" id="hobbies">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Hobbies</p>
+                    <h2 class="section-title">What I'm passionate about</h2>
+                </div>
+                <div class="cards-grid">
+
+                    <div class="hobby-card aparecer">
+                        <span class="card__icon"><img src="asset/img/programacion.png" alt="Programming" width="36" height="36"></span>
+                        <span class="card__label">Programming</span>
+                    </div>
+                    <div class="hobby-card aparecer">
+                        <span class="card__icon"><img src="asset/img/tv.png" alt="TV and shows" width="36" height="36"></span>
+                        <span class="card__label">TV</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Education ============ -->
+        <section class="section" id="formacion">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Education</p>
+                    <h2 class="section-title">Academic background</h2>
+                </div>
+                <div class="edu-grid">
+                    <div class="edu-card aparecer">
+                        <div class="edu-card__logo"><span class="edu-logo-text">UNAPEC</span></div>
+                        <h4>Software Development Engineering</h4>
+                        <p class="edu-card__date">2024 — Present · 5th semester</p>
+                    </div>
+
+                    <div class="edu-card aparecer">
+                        <div class="edu-card__logo"><img src="asset/img/alura.jpg" alt="Alura Logo"></div>
+                        <h4>Intensive Software Development Certificate</h4>
+                        <p class="edu-card__date">2021 — 2022 · Oracle — Alura</p>
+                    </div>
+
+                    <div class="edu-card aparecer">
+                        <div class="edu-card__logo"><img src="asset/img/itla.jpg" alt="ITLA Logo"></div>
+                        <h4>Software Development Technician</h4>
+                        <p class="edu-card__date">2019 — 2021 · ITLA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Projects ============ -->
+        <section class="section alt" id="proyectos">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Projects</p>
+                    <h2 class="section-title">Projects</h2>
+                    <p>A selection of projects I've built during my education and internships.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/atenas-pos.png" alt="Atenas POS screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">School ERP / Point of Sale</p>
+                            <h3 class="project-card__title">Atenas POS</h3>
+                            <p class="project-card__desc">ERP/POS system for commercial and administrative management of educational centers: point of sale, billing to families and students, inventory, purchasing, accounting and electronic invoicing with NCF/ITBIS and DGII reports (606/607). Includes multi-branch, user roles, thermal ticket printing and PDF generation.</p>
+                            <div class="tags">
+                                <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">Chart.js</span><span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a class="chip-btn chip-btn--primary" href="https://prod.atenas.tech/centro/pos/atenas-pos/index.php?page=login" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                                    View demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/alpha-bolsa-empleo.png" alt="ALPHA Job Board screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">Recruitment platform · In development</p>
+                            <h3 class="project-card__title">ALPHA — Job Board</h3>
+                            <p class="project-card__desc">LinkedIn/Indeed-style platform connecting candidates with companies: job posting and search with filters, applications with status tracking and role-based dashboards (candidate, company, administrator) with moderation panel, audit and statistics.</p>
+                            <div class="tags">
+                                <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">jQuery</span>
+                            </div>
+                            <div class="project-card__links">
+                                <span class="project-card__status">In development</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/santuario-vnr.png" alt="El Santuario VNR screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">Video game catalog · In development</p>
+                            <h3 class="project-card__title">El Santuario VNR</h3>
+                            <p class="project-card__desc">Cinematographic showcase site for premium video games with catalog, detailed sheets (platforms and ratings), review system with scoring, products per game, narrative stories and administration panel with CRUD.</p>
+                            <div class="tags">
+                                <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Tailwind CSS</span><span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-card__links">
+                                <span class="project-card__status">In development</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/hotel.JPG" alt="Capital Real Estate screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">Real estate platform</p>
+                            <h3 class="project-card__title">Capital Real Estate</h3>
+                            <p class="project-card__desc">Complete web platform for real estate property management, with administrative panel and listing search.</p>
+                            <div class="tags">
+                                <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">HTML</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a class="chip-btn chip-btn--primary" href="https://inmobiliariacapital.free.nf" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                                    View demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/pasante.JPG" alt="ALPHA Interns screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">Internship management</p>
+                            <h3 class="project-card__title">ALPHA Interns</h3>
+                            <p class="project-card__desc">Internship management system with registration, tracking and reporting modules for companies and students.</p>
+                            <div class="tags">
+                                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a class="chip-btn" href="https://github.com/JoseJavierPena/grupo-alpha" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                                    Repository
+                                </a>
+                                <a class="chip-btn chip-btn--primary" href="https://pasantesalpha.free.nf" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                                    View demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/biker.JPG" alt="BikerRacer screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">Interactive web game</p>
+                            <h3 class="project-card__title">BikerRacer</h3>
+                            <p class="project-card__desc">Web game developed with pure JavaScript; collision logic, animations and real-time scoring.</p>
+                            <div class="tags">
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a class="chip-btn chip-btn--primary" href="https://aldayan.github.io/BikerRacer" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                                    View demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card aparecer">
+                        <div class="project-card__media">
+                            <img src="asset/img/tecno.jpg" alt="Chatbot AI screenshot" width="640" height="400" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__subtitle">Artificial Intelligence</p>
+                            <h3 class="project-card__title">Chatbot AI + Voting System + Dashboard</h3>
+                            <p class="project-card__desc">Enterprise chatbot integrated with LLM for automated support. Secure voting system and real-time data visualization dashboard.</p>
+                            <div class="tags">
+                                <span class="tag">LLM</span><span class="tag">MCP</span><span class="tag">Node.js</span><span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a class="chip-btn" href="https://github.com/aldayan" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                                    Repository
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Contact ============ -->
+        <section class="section" id="contactos">
+            <div class="container">
+                <div class="section-head aparecer">
+                    <p class="eyebrow">Contact</p>
+                    <h2 class="section-title">Let's talk</h2>
+                    <p>Want to get in touch? Fill out the form or write to me directly.</p>
+                </div>
+                <div class="contact__grid">
+                    <div class="contact__info aparecer">
+                        <div class="contact__list">
+                            <div class="contact__item">
+                                <span class="icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                                </span>
+                                <span><span class="label">Email</span><br><a class="value" href="mailto:aldayandev@gmail.com">aldayandev@gmail.com</a></span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </span>
+                                <span><span class="label">Phone</span><br><a class="value" href="tel:+18098616776">+1(809) 861-6776</a></span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                                </span>
+                                <span><span class="label">LinkedIn</span><br><a class="value" href="https://www.linkedin.com/in/aldayan-avila-dotel/" target="_blank" rel="noopener">linkedin.com/in/aldayan-avila-dotel</a></span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                                </span>
+                                <span><span class="label">GitHub</span><br><a class="value" href="https://github.com/aldayan" target="_blank" rel="noopener">/aldayan</a></span>
+                            </div>
+                            <div class="contact__item">
+                                <span class="icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                                </span>
+                                <span><span class="label">Location</span><br><span class="value">Dominican Republic</span></span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="experiencia aparecer">
-                        <img class="img-experiencia " src="asset/img/biker.JPG">
-                        <div class="experiencia-informacion">
-                            <h2 class="experiencia-titulo">E-commerce de motos</h2>
-                            <h3 class="experiencia-texto">Challenge alura tienda</h3>
-                            <div class="experiencia-descripcion">
-                                <span class="experiencia-repositorio"><a href="https://github.com/aldayan/BikerRacer"><button class="experiencia-boton">Repositório</button></a></span>
-                                <span class="experiencia-demo"><a href="https://aldayan.github.io/BikerRacer/"><button class="experiencia-boton">Ver demo</button></a></span>
-                            </div>
+                    <form action="https://formsubmit.co/aldayandev@gmail.com" method="POST" class="contact-form aparecer" id="form" name="form" novalidate>
+                        <input type="hidden" name="_subject" value="New message from your portfolio">
+                        <div class="field">
+                            <label for="nombre">Name</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Your name" autocomplete="name" required>
                         </div>
-                    </div>
-                    <div class="experiencia aparecer">
-                        <img class="img-experiencia " src="asset/img/encriptador.JPG ">
-                        <div class="experiencia-informacion ">
-                            <h2 class="experiencia-titulo">Encriptador de texto</h2>
-                            <h3 class="experiencia-texto">Challenge Alura Codificador </h3>
-                            <div class="experiencia-descripcion">
-                                <span class="experiencia-repositorio"><a href="https://github.com/aldayan/Challenger-1-encriptador-de-texto "><button class="experiencia-boton">Repositório</button></a></span>
-                                <span class="experiencia-demo "><a href="https://aldayan.github.io/Challenger-1-encriptador-de-texto/ "><button class="experiencia-boton">Ver demo</button></a></span>
-                            </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="your@email.com" autocomplete="email" required>
                         </div>
-                    </div>
-
-                    <div class="experiencia aparecer">
-                        <img class="img-experiencia" src="asset/img/votaciones.PNG ">
-                        <div class="experiencia-informacion">
-                            <h2 class="experiencia-titulo">Sistema de votaciones</h2>
-                            <h3 class="experiencia-texto">Proyecto personal </h3>
-                            <div class="experiencia-descripcion">
-                                <span class="experiencia-repositorio"><a href="https://github.com/aldayan/votaciones"><button class="experiencia-boton">Repositório</button></a></span>
-                                <span class="experiencia-demo"><a href=""><button class="experiencia-boton">Ver demo</button></a></span>
-                            </div>
+                        <div class="field">
+                            <label for="asunto">Subject</label>
+                            <input type="text" name="asunto" id="asunto" placeholder="Reason for your message" required>
                         </div>
-                    </div>
-
-                     <div class="experiencia aparecer">
-                        <img class="img-experiencia" src="asset/img/inmobiliaria.PNG ">
-                        <div class="experiencia-informacion">
-                            <h2 class="experiencia-titulo">Inmobiliaria Capital</h2>
-                            <h3 class="experiencia-texto">Proyecto personal </h3>
-                            <div class="experiencia-descripcion">
-                                <span class="experiencia-repositorio"><a href="https://github.com/aldayan/Inmobiliaria-capital"><button class="experiencia-boton">Repositório</button></a></span>
-                                <span class="experiencia-demo"><a href="http://inmobiliariacapital.free.nf/"><button class="experiencia-boton">Ver demo</button></a></span>
-                            </div>
+                        <div class="field">
+                            <label for="mensaje">Message</label>
+                            <textarea name="mensaje" id="mensaje" rows="5" placeholder="Write your message..." required></textarea>
                         </div>
-                    </div>
-
+                        <div class="form-actions">
+                            <button type="submit" id="enviar" class="btn btn--primary">Send message</button>
+                            <p class="alerta" id="alerta" role="alert" aria-live="polite"></p>
+                        </div>
+                    </form>
                 </div>
-            </section>
-
-            <section class="contactos" id="contactos">
-                <div class="container aparecer">
-                    <h2 class="contacto-titulo ">Contacto</h2>
-                    <div class="contacto aparecer">
-                        <div class="titulos-contacto">
-                            <h3 class=" contacto-subtexto">¿Quieres contactarme? aldayan.avila@gmail.com o</h3>
-                            <h3 class="contacto-subtexto">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</h3>
-                        </div>
-
-                        <form action="https://formsubmit.co/aldayanaavila02@gmail.com" method="POST" class="contacto-form" id="form" name="form">
-                            <input class="contacto-input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                            <input class="contacto-input" type="email" id="email" name="email" placeholder="E-mail" required>
-                            <input class="contacto-input" type="text" id="asunto" name="asunto" placeholder="Asunto" required>
-                            <textarea class="contacto-input" rows="5" type="text" cols="40" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-
-                            <button type="submit" id="enviar" class="contacto-boton">Enviar mensaje</button>
-                            <br>
-                            <p class="alerta" id="alerta"></p>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <div class="subir">
-        <a href="#inicio" class="subirinicio"><img src="asset/img/subir.png" alt="boton para subir"></a>
-    </div>
+    <!-- To-top button -->
+    <a href="#inicio" class="to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
 
-    <footer class="footer aparecer">
-        <div class="creditos ">
-            <p>HECHO POR ALDAYAN A. AVILA DOTEL. <br><br>-2022 </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <a href="#inicio" class="brand"><span class="brand__dot" aria-hidden="true"></span> Aldayan<span style="color:var(--accent-2)">.</span>dev</a>
+            <p>© 2026 Aldayan A. Avila Dotel · Built with HTML, CSS and JavaScript.</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/aldayan-avila-dotel/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                </a>
+                <a href="https://github.com/aldayan" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+                </a>
+            </div>
         </div>
     </footer>
 
-    <div class="objeto">
-        <ul class="box">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-
+    <script src="asset/js/main.js"></script>
 </body>
-
-<script type="text/javascript" src="asset/js/aparecer.js">
-</script>
 
 </html>
